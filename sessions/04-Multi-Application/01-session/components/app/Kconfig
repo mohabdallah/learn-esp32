@@ -1,0 +1,19 @@
+menu "Application Implementation"
+
+    choice APP_IMPL
+        prompt "Implementation of application component"
+        help
+            Select one of the implementations of application to be used.
+            This setting is used in app component code and CMakeLists.txt.
+
+        config APP_IMPL_LEDS
+            bool "LEDs (app_leds.c)"
+        config APP_IMPL_RELAYS
+            bool "Relays (app_relays.c)"
+        config APP_IMPL_KEYPAD
+            bool "Keypad (app_keypad.c)"
+        config APP_IMPL_HBRIDGE
+            bool "HBridge (app_hbridge.c)"
+    endchoice
+
+endmenu
